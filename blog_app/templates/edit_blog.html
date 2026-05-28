@@ -1,5 +1,5 @@
 <h1>page create blog</h1>
-<form action="/create-blog-action" method="POST">
+<form action="/edit-blog-action/{{form.instance.id}}" method="POST">
   {% csrf_token %}
   <div>
     <label for="tile">title</label>

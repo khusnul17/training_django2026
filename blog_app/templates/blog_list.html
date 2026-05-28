@@ -1,2 +1,17 @@
 <h1>testing</h1>
-<a href="/create-blog"><button>Create Blog</button>
+<a href="{% url 'create_page' %}"><button>Create Blog</button>
+<table>
+    <tr>
+        <th>title</th>
+        <th>action</th>
+    </tr>
+    {% for i in data %}
+    <tr>
+        <td><b>{{i.title}}</b> <br /></td>
+        <td>
+            <a href="/edit-blog/{{i.id}}"><button>edit
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
